@@ -18,7 +18,7 @@ libv4l2xx_deps = [ libfmt_dep ]
 libv4l2xx = library('v4l2++',
                    libv4l2xx_sources,
                    install : true,
-                   include_directories : [ private_includes ],
+                   include_directories : [ private_includes, common_includes ],
                    dependencies : libv4l2xx_deps,
                    version : meson.project_version())
 
