@@ -1,0 +1,6 @@
+option('static-libc', type : 'boolean', value : false,
+       description : 'Build with -static-libgcc -static-libstdc++')
+
+option('pyv4l2', type : 'feature', value : 'disabled',
+       description : 'Build V4L2 python bindings')
+
