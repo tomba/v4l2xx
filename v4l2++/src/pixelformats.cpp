@@ -69,117 +69,14 @@ static const map<PixelFormat, PixelFormatInfo> format_info_array = {
 				       },
 				       { 8, 2, 1 } },
 			     } },
-	/* YUV planar */
-	{ PixelFormat::YUV420, {
-				       PixelColorType::YUV,
-				       3,
-				       { {
-						 8,
-						 1,
-						 1,
-					 },
-					 { 8, 2, 2 },
-					 { 8, 2, 2 } },
-			       } },
-	{ PixelFormat::YVU420, {
-				       PixelColorType::YUV,
-				       3,
-				       { {
-						 8,
-						 1,
-						 1,
-					 },
-					 { 8, 2, 2 },
-					 { 8, 2, 2 } },
-			       } },
-	{ PixelFormat::YUV422, {
-				       PixelColorType::YUV,
-				       3,
-				       { {
-						 8,
-						 1,
-						 1,
-					 },
-					 { 8, 2, 1 },
-					 { 8, 2, 1 } },
-			       } },
-	{ PixelFormat::YVU422, {
-				       PixelColorType::YUV,
-				       3,
-				       { {
-						 8,
-						 1,
-						 1,
-					 },
-					 { 8, 2, 1 },
-					 { 8, 2, 1 } },
-			       } },
-	{ PixelFormat::YUV444, {
-				       PixelColorType::YUV,
-				       3,
-				       { {
-						 8,
-						 1,
-						 1,
-					 },
-					 { 8, 1, 1 },
-					 { 8, 1, 1 } },
-			       } },
-	{ PixelFormat::YVU444, {
-				       PixelColorType::YUV,
-				       3,
-				       { {
-						 8,
-						 1,
-						 1,
-					 },
-					 { 8, 1, 1 },
-					 { 8, 1, 1 } },
-			       } },
-	/* RGB8 */
-	{ PixelFormat::RGB332, {
-				       PixelColorType::RGB,
-				       1,
-				       { { 8, 1, 1 } },
-			       } },
 	/* RGB16 */
 	{ PixelFormat::RGB565, {
 				       PixelColorType::RGB,
 				       1,
 				       { { 16, 1, 1 } },
 			       } },
-	{ PixelFormat::BGR565, {
-				       PixelColorType::RGB,
-				       1,
-				       { { 16, 1, 1 } },
-			       } },
-	{ PixelFormat::XRGB4444, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 16, 1, 1 } },
-				 } },
-	{ PixelFormat::XRGB1555, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 16, 1, 1 } },
-				 } },
-	{ PixelFormat::ARGB4444, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 16, 1, 1 } },
-				 } },
-	{ PixelFormat::ARGB1555, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 16, 1, 1 } },
-				 } },
 	/* RGB24 */
 	{ PixelFormat::RGB888, {
-				       PixelColorType::RGB,
-				       1,
-				       { { 24, 1, 1 } },
-			       } },
-	{ PixelFormat::BGR888, {
 				       PixelColorType::RGB,
 				       1,
 				       { { 24, 1, 1 } },
@@ -190,84 +87,26 @@ static const map<PixelFormat, PixelFormatInfo> format_info_array = {
 					 1,
 					 { { 32, 1, 1 } },
 				 } },
-	{ PixelFormat::XBGR8888, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 32, 1, 1 } },
-				 } },
-	{ PixelFormat::RGBX8888, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 32, 1, 1 } },
-				 } },
-	{ PixelFormat::BGRX8888, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 32, 1, 1 } },
-				 } },
-
-	{ PixelFormat::ARGB8888, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 32, 1, 1 } },
-				 } },
-	{ PixelFormat::ABGR8888, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 32, 1, 1 } },
-				 } },
-	{ PixelFormat::RGBA8888, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 32, 1, 1 } },
-				 } },
-	{ PixelFormat::BGRA8888, {
-					 PixelColorType::RGB,
-					 1,
-					 { { 32, 1, 1 } },
-				 } },
-
-	{ PixelFormat::XRGB2101010, {
-					    PixelColorType::RGB,
+	{ PixelFormat::SBGGR8, {
+					PixelColorType::RAW,
 					    1,
-					    { { 32, 1, 1 } },
-				    } },
-	{ PixelFormat::XBGR2101010, {
-					    PixelColorType::RGB,
+					    { { 8, 1, 1 } },
+					    } },
+	{ PixelFormat::SGBRG8, {
+					PixelColorType::RAW,
 					    1,
-					    { { 32, 1, 1 } },
-				    } },
-	{ PixelFormat::RGBX1010102, {
-					    PixelColorType::RGB,
+					    { { 8, 1, 1 } },
+					    } },
+	{ PixelFormat::SGRBG8, {
+					PixelColorType::RAW,
 					    1,
-					    { { 32, 1, 1 } },
-				    } },
-	{ PixelFormat::BGRX1010102, {
-					    PixelColorType::RGB,
+					    { { 8, 1, 1 } },
+					    } },
+	{ PixelFormat::SRGGB8, {
+					PixelColorType::RAW,
 					    1,
-					    { { 32, 1, 1 } },
-				    } },
-
-	{ PixelFormat::ARGB2101010, {
-					    PixelColorType::RGB,
-					    1,
-					    { { 32, 1, 1 } },
-				    } },
-	{ PixelFormat::ABGR2101010, {
-					    PixelColorType::RGB,
-					    1,
-					    { { 32, 1, 1 } },
-				    } },
-	{ PixelFormat::RGBA1010102, {
-					    PixelColorType::RGB,
-					    1,
-					    { { 32, 1, 1 } },
-				    } },
-	{ PixelFormat::BGRA1010102, {
-					    PixelColorType::RGB,
-					    1,
-					    { { 32, 1, 1 } },
-				    } },
+					    { { 8, 1, 1 } },
+					    } },
 	{ PixelFormat::SBGGR12, {
 					PixelColorType::RAW,
 					1,
@@ -275,16 +114,6 @@ static const map<PixelFormat, PixelFormatInfo> format_info_array = {
 				} },
 	{ PixelFormat::SRGGB12, {
 					PixelColorType::RAW,
-					1,
-					{ { 16, 1, 1 } },
-				} },
-	{ PixelFormat::META_8, {
-				       PixelColorType::RGB,
-				       1,
-				       { { 8, 1, 1 } },
-			       } },
-	{ PixelFormat::META_16, {
-					PixelColorType::RGB,
 					1,
 					{ { 16, 1, 1 } },
 				} },
@@ -301,6 +130,21 @@ PixelFormat DRMFourCCToPixelFormat(const std::string& fourcc)
 		return PixelFormat::RGB888;
 
 	return FourCCToPixelFormat(fourcc);
+}
+
+std::string PixelFormatToDRMFourCC(PixelFormat fmt)
+{
+	// Handle the formats which differ between DRM and V4L2
+	switch (fmt) {
+	case PixelFormat::RGB565:
+		return "RG16";
+	case PixelFormat::XRGB8888:
+		return "XR24";
+	case PixelFormat::RGB888:
+		return "RG24";
+	default:
+		return PixelFormatToFourCC(fmt);
+	}
 }
 
 const struct PixelFormatInfo& get_pixel_format_info(PixelFormat format)

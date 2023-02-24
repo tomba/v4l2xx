@@ -1,11 +1,17 @@
 libv4l2xx_sources = files([
+    'src/mediabus.cpp',
+    'src/mediadevice.cpp',
     'src/videodevice.cpp',
+    'src/videosubdev.cpp',
     'src/pixelformats.cpp',
     'src/helpers.cpp',
 ])
 
 public_headers = [
+    'inc/v4l2++/mediabus.h',
+    'inc/v4l2++/mediadevice.h',
     'inc/v4l2++/videodevice.h',
+    'inc/v4l2++/videosubdev.h',
     'inc/v4l2++/pixelformats.h',
     'inc/v4l2++/helpers.h',
 ]

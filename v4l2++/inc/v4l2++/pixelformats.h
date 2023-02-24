@@ -20,57 +20,25 @@ enum class PixelFormat : uint32_t {
 	NV16 = MakeFourCC("NV16"),
 	NV61 = MakeFourCC("NV61"),
 
-	YUV420 = MakeFourCC("YU12"),
-	YVU420 = MakeFourCC("YV12"),
-	YUV422 = MakeFourCC("YU16"),
-	YVU422 = MakeFourCC("YV16"),
-	YUV444 = MakeFourCC("YU24"),
-	YVU444 = MakeFourCC("YV24"),
-
 	UYVY = MakeFourCC("UYVY"),
 	YUYV = MakeFourCC("YUYV"),
 	YVYU = MakeFourCC("YVYU"),
 	VYUY = MakeFourCC("VYUY"),
 
-	XRGB8888 = MakeFourCC("XR24"),
-	XBGR8888 = MakeFourCC("XB24"),
-	RGBX8888 = MakeFourCC("RX24"),
-	BGRX8888 = MakeFourCC("BX24"),
-
-	ARGB8888 = MakeFourCC("AR24"),
-	ABGR8888 = MakeFourCC("AB24"),
-	RGBA8888 = MakeFourCC("RA24"),
-	BGRA8888 = MakeFourCC("BA24"),
-
-	RGB888 = MakeFourCC("RG24"),
-	BGR888 = MakeFourCC("BG24"),
+	RGB888 = MakeFourCC("RGB3"),
+	XRGB8888 = MakeFourCC("RGB4"),
 
 	RGB332 = MakeFourCC("RGB8"),
 
-	RGB565 = MakeFourCC("RG16"),
-	BGR565 = MakeFourCC("BG16"),
+	RGB565 = MakeFourCC("RGBP"),
 
-	XRGB4444 = MakeFourCC("XR12"),
-	XRGB1555 = MakeFourCC("XR15"),
-
-	ARGB4444 = MakeFourCC("AR12"),
-	ARGB1555 = MakeFourCC("AR15"),
-
-	XRGB2101010 = MakeFourCC("XR30"),
-	XBGR2101010 = MakeFourCC("XB30"),
-	RGBX1010102 = MakeFourCC("RX30"),
-	BGRX1010102 = MakeFourCC("BX30"),
-
-	ARGB2101010 = MakeFourCC("AR30"),
-	ABGR2101010 = MakeFourCC("AB30"),
-	RGBA1010102 = MakeFourCC("RA30"),
-	BGRA1010102 = MakeFourCC("BA30"),
+	SBGGR8 = MakeFourCC("BA81"),
+	SGBRG8 = MakeFourCC("GBRG"),
+	SGRBG8 = MakeFourCC("GRBG"),
+	SRGGB8 = MakeFourCC("RGGB"),
 
 	SBGGR12 = MakeFourCC("BG12"),
 	SRGGB12 = MakeFourCC("RG12"),
-
-	META_8 = MakeFourCC("ME08"),
-	META_16 = MakeFourCC("ME16"),
 };
 
 inline PixelFormat FourCCToPixelFormat(const std::string& fourcc)
@@ -79,6 +47,7 @@ inline PixelFormat FourCCToPixelFormat(const std::string& fourcc)
 }
 
 PixelFormat DRMFourCCToPixelFormat(const std::string& fourcc);
+std::string PixelFormatToDRMFourCC(PixelFormat fmt);
 
 inline std::string PixelFormatToFourCC(PixelFormat f)
 {
