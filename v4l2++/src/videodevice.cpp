@@ -540,7 +540,7 @@ static v4l2_buf_type get_buf_type(VideoStreamer::StreamerType type)
 	case MetaStreamer::StreamerType::CaptureMeta:
 		return V4L2_BUF_TYPE_META_CAPTURE;
 	case MetaStreamer::StreamerType::OutputMeta:
-		return (v4l2_buf_type)14; // XXX V4L2_BUF_TYPE_META_OUTPUT;
+		return V4L2_BUF_TYPE_META_OUTPUT;
 	default:
 		FAIL("Bad StreamerType");
 	}
