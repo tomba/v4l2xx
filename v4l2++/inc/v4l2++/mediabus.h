@@ -89,6 +89,9 @@ enum class BusFormat {
 	S5C_UYVY_JPEG_1X8,
 
 	AHSV8888_1X32,
+
+	METADATA_8,
+	METADATA_16,
 };
 
 uint32_t BusFormatToCode(BusFormat fmt);

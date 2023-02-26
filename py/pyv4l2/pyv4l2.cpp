@@ -175,7 +175,10 @@ PYBIND11_MODULE(pyv4l2, m)
 
 		.BUS_FMT_ENUM(S5C_UYVY_JPEG_1X8)
 
-		.BUS_FMT_ENUM(AHSV8888_1X32);
+		.BUS_FMT_ENUM(AHSV8888_1X32)
+
+		.BUS_FMT_ENUM(METADATA_8)
+		.BUS_FMT_ENUM(METADATA_16);
 
 	py::enum_<ConfigurationType>(m, "ConfigurationType")
 		.value("Active", ConfigurationType::Active)
@@ -334,7 +337,10 @@ PYBIND11_MODULE(pyv4l2, m)
 		.value("SRGGB8", PixelFormat::SRGGB8)
 
 		.value("SBGGR12", PixelFormat::SBGGR12)
-		.value("SRGGB12", PixelFormat::SRGGB12);
+		.value("SRGGB12", PixelFormat::SRGGB12)
+
+		.value("META_8", PixelFormat::META_8)
+		.value("META_16", PixelFormat::META_16);
 
 	m.def("fourcc_to_pixelformat", &FourCCToPixelFormat);
 	m.def("pixelformat_to_fourcc", &PixelFormatToFourCC);

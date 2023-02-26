@@ -117,6 +117,16 @@ static const map<PixelFormat, PixelFormatInfo> format_info_array = {
 					1,
 					{ { 16, 1, 1 } },
 				} },
+	{ PixelFormat::META_8, {
+				       PixelColorType::RGB,
+				       1,
+				       { { 8, 1, 1 } },
+			       } },
+	{ PixelFormat::META_16, {
+					PixelColorType::RGB,
+					1,
+					{ { 16, 1, 1 } },
+				} },
 };
 
 PixelFormat DRMFourCCToPixelFormat(const std::string& fourcc)
